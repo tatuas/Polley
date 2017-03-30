@@ -41,6 +41,5 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 
-    debugCompile project(path: ':library', configuration: 'debug')
-    releaseCompile project(path: ':library', configuration: 'release')
+    compile project(':library')
 }
