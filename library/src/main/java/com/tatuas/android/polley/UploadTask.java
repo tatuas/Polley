@@ -151,7 +151,7 @@ public abstract class UploadTask {
                 }
             }
         } catch (Exception e) {
-            PolleyLog.message(this, e.toString());
+            e.printStackTrace();
         } finally {
             if (cursor != null) {
                 cursor.close();

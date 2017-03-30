@@ -48,7 +48,7 @@ public class PostRequest {
                     );
                     pairs.add(item.getKey() + "=" + value);
                 } catch (Exception e) {
-                    PolleyLog.message(this, "Create request url error.");
+                    e.printStackTrace();
                 }
             }
 
