@@ -1,0 +1,36 @@
+# https://circleci.com/docs/android
+
+general:
+    artifacts:
+        - ./app/build/outputs/apk/
+        - ./app/build/reports/tests/
+
+machine:
+    java:
+        version: oraclejdk8
+    environment:
+        ANDROID_HOME: /usr/local/android-sdk-linux
+        LC_CTYPE: en_US.UTF-8
+        LC_ALL: en_US.UTF-8
+        JAVA_OPTS: -Dfile.encoding=UTF-8 -Xms256m -Xmx3584m -XX:MaxPermSize=128m
+        GRADLE_OPTS: -Dorg.gradle.parallel=false -Dorg.gradle.daemon=false -Dorg.gradle.jvmargs="-Xms256m -Xmx3584m -XX:MaxPermSize=128m -XX:+HeapDumpOnOutOfMemoryError"
+
+test:
+    override:
+        - ./gradlew clean
+        - ./gradlew buildDebug -PdisablePreDex
+
+deployment:
+    production:
+        branch: master
+        commands:
+        - ./gradlew clean
+        - ./gradlew buildRelease -PdisablePreDex
+
+# https://discuss.circleci.com/t/android-build-tools-23-0-2-not-available/455
+dependencies:
+    cache_directories:
+        - ~/.android
+    pre:
+        - echo y | android update sdk --no-ui --all --filter build-tools-25.0.2,android-25,extra-google-gcm,extra-android-m2repository,extra-android-support,extra-google-google_play_services,extra-google-m2repository,extra-google-play_billing,tools,platform-tools
+        - echo y | android update sdk --no-ui --all --filter build-tools-25.0.2,extra-android-support
