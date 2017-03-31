@@ -4,7 +4,7 @@ Android large ***P*** ayload POST library, respect V ***olley*** .
 
 ***Polley*** can safely execute multi thread Large payload POST.
 
-**Polley is deprecated. Use okhttp when large payload POST.**
+**Polley is now DEPRECATED. Use okhttp when large payload POST.**
 
 # How to install
 
