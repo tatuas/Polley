@@ -6,9 +6,15 @@ Android large ***P*** ayload POST library, respect V ***olley*** .
 
 # How to install
 
-${ROOT}/build.gradle
+${YOUR_APP_MODULE}/build.gradle
 ```
+repositories {
+    maven { url 'http://tatuas.github.io/polley/repository/' }
+}
 
+dependencies {
+    compile 'com.tatuas.android:polley:0.0.1@aar'
+}
 ```
 
 # How to build library aar
