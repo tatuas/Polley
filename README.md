@@ -1,5 +1,5 @@
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
-[![SAY Goodbye](https://img.shields.io/badge/now-deprecated-red.svg)](README.md)
+[![Now Deprecated](https://img.shields.io/badge/now-Deprecated-red.svg)](README.md)
 
 # Polley [Deprecated]
 
