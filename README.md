@@ -1,3 +1,5 @@
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+
 # Polley [Deprecated]
 
 Android large ***P*** ayload POST library, respect V ***olley*** .
