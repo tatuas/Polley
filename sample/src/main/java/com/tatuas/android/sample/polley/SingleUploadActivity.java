@@ -22,7 +22,7 @@ import permissions.dispatcher.NeedsPermission;
 import permissions.dispatcher.RuntimePermissions;
 
 @RuntimePermissions
-public class MainActivity extends AppCompatActivity {
+public class SingleUploadActivity extends AppCompatActivity {
 
     private MyUploadHelper helper;
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_single_upload);
         ButterKnife.bind(this);
         helper = new MyUploadHelper(this, UploadType.MimeType.IMAGE_ALL);
     }
@@ -57,17 +57,17 @@ public class MainActivity extends AppCompatActivity {
         helper.startUpload("Select 1 photo", REQUEST_CODE, new SingleUploadHelper.Callback() {
             @Override
             public void onStart() {
-                Toast.makeText(MainActivity.this, "start", Toast.LENGTH_LONG).show();
+                Toast.makeText(SingleUploadActivity.this, "start", Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onSucceed(SingleUploadHelper.State state, String successMessage) {
-                Toast.makeText(MainActivity.this, "succeed\n\n" + successMessage, Toast.LENGTH_LONG).show();
+                Toast.makeText(SingleUploadActivity.this, "succeed\n\n" + successMessage, Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onFailed(SingleUploadHelper.State state, String errorMessage) {
-                Toast.makeText(MainActivity.this, "failed\n\n" + errorMessage, Toast.LENGTH_LONG).show();
+                Toast.makeText(SingleUploadActivity.this, "failed\n\n" + errorMessage, Toast.LENGTH_LONG).show();
             }
         });
     }
