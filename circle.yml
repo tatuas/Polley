@@ -18,14 +18,14 @@ machine:
 test:
     override:
         - ./gradlew clean
-        - ./gradlew buildDebug -PdisablePreDex
+        - ./gradlew build -PdisablePreDex
 
 deployment:
     production:
         branch: master
         commands:
         - ./gradlew clean
-        - ./gradlew buildRelease -PdisablePreDex
+        - ./gradlew build -PdisablePreDex
 
 # https://discuss.circleci.com/t/android-build-tools-23-0-2-not-available/455
 dependencies:
