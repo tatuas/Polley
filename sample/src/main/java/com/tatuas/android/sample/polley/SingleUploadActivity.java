@@ -49,7 +49,7 @@ public class SingleUploadActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        MainActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
+        SingleUploadActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
     }
 
     @NeedsPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -74,7 +74,7 @@ public class SingleUploadActivity extends AppCompatActivity {
 
     @OnClick(R.id.start_button)
     void onStartButtonClicked() {
-        MainActivityPermissionsDispatcher.startUploadWithCheck(this);
+        SingleUploadActivityPermissionsDispatcher.startUploadWithCheck(this);
     }
 
     private static final class MyUploadHelper extends SingleUploadHelper {
