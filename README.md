@@ -1,6 +1,6 @@
 # Polley [Deprecated]
 
-[![CircleCI](https://circleci.com/gh/tatuas/polley.svg?style=svg&circle-token=335f90b71cbf97a7d60efc33ac3712d8e8678d2f)](https://circleci.com/gh/tatuas/polley)
+[![CircleCI](https://circleci.com/gh/tatuas/polley.svg?style=shield&circle-token=335f90b71cbf97a7d60efc33ac3712d8e8678d2f)](https://circleci.com/gh/tatuas/polley)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![Now Deprecated](https://img.shields.io/badge/now-Deprecated-red.svg)](README.md)
 
