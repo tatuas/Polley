@@ -10,6 +10,11 @@ Android large ***P*** ayload POST library, respect V ***olley*** .
 
 **Polley is now DEPRECATED. Use okhttp when large payload POST.**
 
+# Why Polley has built?
+https://youtu.be/yhv8l9F44qo?t=3m51s
+
+According to YouTube, Volley was not suitable for treating large payloads, so I wanted a library that could easily treat large payload like Volley.
+
 # How to install
 
 ${YOUR_APP_MODULE}/build.gradle
